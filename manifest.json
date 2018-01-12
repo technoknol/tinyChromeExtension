@@ -1,0 +1,26 @@
+{
+"update_url": "https://example.com",
+
+  "manifest_version": 2,
+  "name": "Shyam",
+  "version": "4.0.8",
+  "description": "View definitions easily as you browse the web.",
+  "content_scripts": [
+    {
+      "matches": ["http://mis.neosofttech.in/?action=summary_form"],
+      "js": ["jquery.min.js","moment.min.js","content.min.js"],
+      "all_frames": true
+    }
+  ],
+
+  "permissions": [
+    "http://mis.neosofttech.in/?action=summary_form"
+  ],
+  "icons": {
+    "16": "static/icon16.png",
+    "32": "static/icon32.png",
+    "48": "static/icon48.png",
+    "128": "static/icon128.png"
+  },
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com https://clients5.google.com https://apis.google.com https://cdnjs.cloudflare.com; object-src 'self'"
+}
